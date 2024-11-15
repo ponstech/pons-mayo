@@ -9,7 +9,7 @@ typing
 torch
 torchvision
 numpy
-timm== "0.3.2"
+timm==0.3.2
 pathlib
 json
 argparse
