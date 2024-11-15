@@ -1,8 +1,8 @@
 Model Architecture Details
-• Base Architecture: Multi-Scale CNN (with channels=3)
-• Custom Modification: A Monogenic Filter layer was added, which changes the input channels from 3 to 6. This adjustment is necessary to incorporate monogenic filter outputs into the model.
+Base Architecture: Multi-Scale CNN (with channels=3)
+Custom Modification: A Monogenic Filter layer was added, which changes the input channels from 3 to 6. This adjustment is necessary to incorporate monogenic filter outputs into the model.
 Pretrained Models
-• The trained model weights are provided as .pt files. These weights are optimized for the modified architecture (with channels=6).
+The trained model weights are provided as .pt files. These weights are optimized for the modified architecture (with channels=6).
 Note: Ensure that the model architecture in your code matches this modified configuration when loading the provided .pt files.
 
 
