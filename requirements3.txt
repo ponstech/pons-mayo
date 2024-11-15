@@ -1,0 +1,22 @@
+batchgeneratorsv2
+fft_conv_pytorch
+torch.nn.functional
+abc
+math
+scipy
+os
+typing
+torch
+torchvision
+numpy
+timm== "0.3.2"
+pathlib
+json
+argparse
+time
+builtins
+datetime
+collections
+PIL
+sys
+functools
