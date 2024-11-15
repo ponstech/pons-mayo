@@ -5,7 +5,6 @@ Multi-Scale with Monogenic Filter 20 epoch (Bmode-Original)| 20-epoch-monogenic-
 Multi-Scale with Monogenic Filter 30 epoch| 30-epoch-monogenic-bmode.pt | [download](https://drive.usercontent.google.com/download?id=1-3XRwSN2Zj6f2MSw3ovDrcQG-v0ydJHa&export=download&authuser=0) |
 Multi-Scale with Monogenic Filter 50 epoch | 50-epoch-monogenic-bmode.pt | [download](https://drive.usercontent.google.com/download?id=1-9Cxq_lTr1-IeID-pGXtsl56c9BNBUkd&export=download&authuser=0) |
 Multi-Scale with Monogenic Filter 100 epoch (Bmode-Original)| 100-epoch-monogenic-bmode.pt | [download](https://drive.usercontent.google.com/download?id=1-9PH32ju0CbGve7Cm3b5J9SdQcththJN&export=download&authuser=0) |
-
 Multi-Scale with Monogenic Filter 10 epoch (Bmode-Enhancement)| 10-epoch-monogenic-enhancement.pt | [download](https://drive.usercontent.google.com/download?id=10gRIyKzKQ2SOIMAeMQZa5WxnwUpVpvGU&export=download&authuser=0) |
 Multi-Scale with Monogenic Filter 20 epoch (Bmode-Enhancement)| 20-epoch-monogenic-enhancement.pt | [download](https://drive.usercontent.google.com/download?id=10kTyflnMGX87_CRtaKiRV-_n-sdgoVli&export=download&authuser=0) |
 Multi-Scale with Monogenic Filter 30 epoch (Bmode-Enhancement)| 30-epoch-monogenic-enhancement.pt | [download](https://drive.usercontent.google.com/download?id=10m-dWIOlbQeOYgDSZzZB6qhDsChbPx-1&export=download&authuser=0) |
