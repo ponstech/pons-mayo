@@ -1,6 +1,6 @@
 torch
 torchvision
-timm==0.3.2
+timm == 0.3.2
 argparse
 datetime
 json
