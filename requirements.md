@@ -8,4 +8,5 @@ Multi-Scale with Equiangular Basis Vectors 105 epoch with augmentation | EBV_ana
 Multi-MAE with 35 epoch| multimae_base_35e | requirements4.txt |
 Multi-MAE with 100 epoch| multimae_base_100e | requirements4.txt |
 Multi-MAE with 400 epoch| multimae_base_400e | requirements4.txt |
+Multi-Scale using B-mode+IE+IQ with 105 epoch| msc_late | requirements5.txt |
 
