@@ -33,9 +33,8 @@ ResNet34 - Linear Noise | 0.96_resnet34_noiseType_linear.pth | [download](https:
 ResNet34 - Gaussian Noise | 0.86_resnet34_noiseType_gaussian.pth | [download]
 (https://drive.usercontent.google.com/download?id=10bZc5LaltnNiaE1fnNPJIJgtvc9wgbcu&export=download&authuser=0) |
 ResNet34 - Salt&Pepper | 0.73_resnet34_noiseType_impulse.pth | [download](https://drive.usercontent.google.com/download?id=10lvvqG6QTfne7I5kMl7cQy1HhdvK_4dB&export=download&authuser=0) |
-ResNet50 - Linear Noise )| 0.97_resnet50_noiseType_linear.pth | [download](https://drive.usercontent.google.com/download?id=1-WFu7zDW3yyrBA0zuNZ_1GRkzNof6d1S&export=download&authuser=0) |
-ResNet50 - Gaussian Noise | 0.86_resnet50_noiseType_gaussian.pth | [download]
-(https://drive.usercontent.google.com/download?id=1056cRFOSsTM_4SY28GfjkJ-aSbmTDYPT&export=download&authuser=0) |
+ResNet50 - Linear Noise | 0.97_resnet50_noiseType_linear.pth | [download](https://drive.usercontent.google.com/download?id=1-WFu7zDW3yyrBA0zuNZ_1GRkzNof6d1S&export=download&authuser=0) |
+ResNet50 - Gaussian Noise | 0.86_resnet50_noiseType_gaussian.pth | [download](https://drive.usercontent.google.com/download?id=1056cRFOSsTM_4SY28GfjkJ-aSbmTDYPT&export=download&authuser=0) |
 ResNet50 - Salt&Pepper | 0.86_resnet50_vanilla.pth | [download](https://drive.usercontent.google.com/download?id=10r_U-pmgCqco7GfJFTGawPvLBl57N5Ah&export=download&authuser=0) |
 
 
