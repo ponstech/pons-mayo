@@ -1,0 +1,14 @@
+resume:
+save_dir: models/
+log_dir: ${name}/
+task: Pretrain
+status: train
+
+
+name: pretrain
+tensorboard: false
+
+defaults:
+  - pretrain: xiang
+  - hydra/job_logging : custom
+  - hydra/run/dir: job_timestamp

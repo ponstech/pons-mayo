@@ -1,0 +1,55 @@
+# @package _global_
+# GENERAL
+seed: 123
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+# EPOCH
+epochs: 61
+warmup_epochs: 20
+
+# LOG ROOT
+log_root:  /home/guest/Work/Xiang/logs/Mul-AE/
+print_freq: 400
+
+# MODEL
+arch: 
+  _target_: srcs.model.mae.create_model
+  model_name: mae_vit_base_patch16
+  pth_path: /home/guest/Work/Xiang/checkpoints/mae_pretrain_vit_base.pth
+
+mask_ratio: 0.25
+
+# DATASET
+data_name: BP4D
+csv_root: /home/guest/Work/Xiang/csv/BP4D
+texture_root:  /home/guest/Work/Xiang/data/Texture_crop/BP4D
+modalities: ['texture']
+training: true
+batch_size: 64
+fold: 'MAE'
+
+# TRANSFORM
+input_size: 224
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+
+# OPTIMIZER
+lr: 0.0001
+min_lr: 1.e-6
+weight_decay: 0.05
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: []
+  lr_beta: 0.1
+
+trainer:
+  _target_: srcs.trainer.trainer_pretrain_mae.Trainer
+

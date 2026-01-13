@@ -1,0 +1,82 @@
+# @package _global_
+# GENERAL
+seed: 123
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+
+# LOG ROOT
+log_root: /media/xiang/Disk3/Work/logs/Mul-AE
+print_freq: 300
+save_epochs: 100
+
+# MODEL
+arch: 
+  _target_: srcs.model.vit_model.create_model
+  model_name: vit_base_patch16
+  # finetune: /media/xiang/Disk3/Work/new_23/checkpoints/mae_pretrain_vit_base.pth
+  # finetune: /media/xiang/Disk3/Work/new_23/checkpoints/BP4D+/Thermal/2023-05-01/13-57-32/checkpoint-epoch100.pth # rgbdt
+  # finetune: /media/xiang/Disk3/Work/logs/Mul-AE/train/Pretrain/BP4D+/data/2023-06-08/14-29-31/models/checkpoint-epoch100.pth # rgbd
+  finetune: /media/xiang/Disk3/Work/logs/Mul-AE/Experiment/BP4D/2023-05-10/11-03-01/fold2/models/checkpoint-epoch3.pth # BP4D fintune to DISFA
+  num_classes: 8
+  drop_path: 0.1
+
+mask_ratio: null
+# DATASET
+
+# data_name: BP4D
+# csv_root: /media/xiang/Disk2/csv/BP4D/Huiyuan/train_test_depth
+# texture_root: /media/xiang/Disk2/Data/Texture_crop/${data_name}
+# depth_root: /media/xiang/Disk2/Data/Depth_crop/${data_name}
+
+data_name: DISFA
+csv_root: /media/xiang/Disk2/csv/${data_name}
+texture_root: /media/xiang/Disk2/Data/Texture_crop/${data_name}
+
+# flip: 0.5
+
+modalities: ['texture']
+training: true
+batch_size: 64
+fold: fold3
+channel_mixing: false
+
+# TRANSFORM
+input_size: 224
+# flip: 0.5
+# rot: 30
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+# CRITERIONS
+criterions:
+  - _target_: srcs.model.loss.bce_logit_loss
+    train: true
+  - _target_: srcs.model.loss.bce_logit_loss
+    train: false
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# OPTIMIZER
+epochs: 5
+warmup_epochs: 0
+decay_epochs: 0
+
+lr: 0.0002
+min_lr: 1.e-6
+accum_iter: 1
+weight_decay: 0.05
+layer_decay: 0.75
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: [1]
+  lr_beta: [0.1,]
+  is_cosine_decay: false
+
+trainer:
+  _target_: srcs.trainer.trainer_finetune.Trainer
+

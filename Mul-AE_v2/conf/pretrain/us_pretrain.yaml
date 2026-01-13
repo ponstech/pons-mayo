@@ -1,0 +1,75 @@
+# @package _global_
+# GENERAL
+
+name: pretrain
+tensorboard: false
+
+resume:
+save_dir: models/
+log_dir: ${name}/
+task: Pretrain
+status: train
+
+defaults:
+  # - pretrain: xiang
+  - hydra/job_logging : default
+  # - hydra/run/dir: job_timestamp
+
+
+seed: 123
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+# EPOCH
+epochs: 100
+save_epochs: 10
+warmup_epochs: 40
+
+# LOG ROOT
+log_root: logs
+print_freq: 500
+
+# MODEL
+arch: 
+  _target_: srcs.model.mul_ae.create_model
+  model_name: mae_vit_base_patch16
+
+mask_ratio: 0.5
+
+# DATASET
+data_name: BP4D+
+csv_root: csv_files
+texture_root:  ''
+depth_root: ''
+thermal_root: ''
+modalities: ['texture', 'depth', 'thermal']
+training: true
+batch_size: 64
+fold: 'data'
+
+# TRANSFORM
+input_size: 224
+
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+
+# OPTIMIZER
+lr: 0.0002
+min_lr: 1.e-6
+weight_decay: 0.05
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: []
+  lr_beta: [0.1]
+  is_cosine_decay: true
+
+trainer:
+  _target_: srcs.trainer.trainer_pretrain.Trainer
+

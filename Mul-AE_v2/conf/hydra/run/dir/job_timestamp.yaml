@@ -1,0 +1,2 @@
+# @package hydra.run
+dir: ${log_root}/${status}/${task}/${data_name}/${fold}/${now:%Y-%m-%d}/${now:%H-%M-%S}

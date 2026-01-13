@@ -1,0 +1,61 @@
+# @package _global_
+# GENERAL
+seed: 123
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+
+# EPOCH
+epochs: 100
+save_epochs: 100
+warmup_epochs: 40
+
+# LOG ROOT
+log_root: /media/xiang/Disk3/Work/logs/Mul-AE
+print_freq: 500
+
+# MODEL
+arch: 
+  _target_: srcs.model.mul_ae.create_model
+  model_name: mae_vit_base_patch16
+  pth_path: /media/xiang/Disk3/Work/new_23/checkpoints/mae_pretrain_vit_base.pth
+
+mask_ratio: 0.5
+
+# DATASET
+data_name: BP4D+
+csv_root: /media/xiang/Disk2/csv/BP4D+/all_frames/thermal/
+texture_root:  /media/xiang/Disk2/Data/Texture_crop/BP4D+/
+depth_root: /media/xiang/Disk2/Data/Depth_crop/BP4D+/
+thermal_root: /media/xiang/Disk2/Data/Thermal_crop/BP4D+/Temp_img_homo_crop/
+modalities: ['texture', 'depth', 'thermal']
+training: true
+batch_size: 64
+fold: 'data'
+
+# TRANSFORM
+input_size: 224
+
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+
+# OPTIMIZER
+lr: 0.0002
+min_lr: 1.e-6
+weight_decay: 0.05
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: []
+  lr_beta: [0.1]
+  is_cosine_decay: true
+
+trainer:
+  _target_: srcs.trainer.trainer_pretrain.Trainer
+

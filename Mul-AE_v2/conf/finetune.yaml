@@ -1,0 +1,13 @@
+resume:
+save_dir: models/
+log_dir: ${name}/
+task: Finetune
+status: train
+
+name: finetune
+tensorboard: true
+
+defaults:
+  - finetune: xiang
+  - hydra/job_logging : custom
+  - hydra/run/dir: job_timestamp

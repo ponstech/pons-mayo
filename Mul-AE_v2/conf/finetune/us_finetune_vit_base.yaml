@@ -1,0 +1,107 @@
+# @package _global_
+# GENERAL
+
+name: finetune
+tensorboard: true
+
+resume:
+save_dir: "/home/ec2-user/SageMaker/channel-mix/Mul-AE/cp"
+log_dir: ''
+task: Finetune
+status: train
+
+defaults:
+  # - pretrain: xiang
+  - hydra/job_logging : default
+  # - hydra/run/dir: job_timestamp
+
+
+seed: 42
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+
+# LOG ROOT
+log_root: ''
+print_freq: 300
+save_epochs: 100
+
+# MODEL
+arch: 
+  _target_: srcs.model.vit_model.create_model
+  # model_name: vit_base_patch16
+  
+  # _target_: srcs.model.mul_ae.create_model
+  model_name: mae_vit_base_patch16
+  
+  # finetune: /media/xiang/Disk3/Work/new_23/checkpoints/mae_pretrain_vit_base.pth
+  # finetune: /media/xiang/Disk3/Work/new_23/checkpoints/BP4D+/Thermal/2023-05-01/13-57-32/checkpoint-epoch100.pth # rgbdt
+  # finetune: /media/xiang/Disk3/Work/logs/Mul-AE/train/Pretrain/BP4D+/data/2023-06-08/14-29-31/models/checkpoint-epoch100.pth # rgbd
+  finetune: "/home/ec2-user/SageMaker/checkpoint-epoch100_sc_channel_mix_vit_base.pth.pth" # BP4D fintune to DISFA
+  num_classes: 2
+  drop_path: 0.1
+
+mask_ratio: null
+# DATASET
+
+fold_no: 1
+data_name: BP4D
+csv_root: "/home/ec2-user/SageMaker/channel-mix/Mul-AE/csv_files"
+# texture_root: /media/xiang/Disk2/Data/Texture_crop/${data_name}
+
+# texture_root:  /home/jupyter/MultiMAE/busi/fold${fold_no}/enhanced/
+# depth_root: /home/jupyter/MultiMAE/busi/fold${fold_no}/bmode/
+# thermal_root: /home/jupyter/MultiMAE/busi/fold${fold_no}/improved/
+
+texture_root:  "/home/ec2-user/SageMaker/Breast_Data/miccai_busi_mscn/fold1/enhanced"
+depth_root: "/home/ec2-user/SageMaker/Breast_Data/miccai_busi_mscn/fold1/bmode"
+thermal_root: "/home/ec2-user/SageMaker/Breast_Data/miccai_busi_mscn/fold1/improved"
+
+modalities: ['texture', 'depth', 'thermal']
+
+# rot: 30
+
+training: true
+batch_size: 32
+fold: busi_fold${fold_no}
+#fold: combined_fold${fold_no}
+channel_mixing: true
+# channel_mixing: false
+
+# TRANSFORM
+input_size: 224
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+  - _target_: srcs.model.metric.accuracy
+# CRITERIONS
+criterions:
+  - _target_: srcs.model.loss.bce_logit_loss
+    train: true
+  - _target_: srcs.model.loss.bce_logit_loss
+    train: false
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# OPTIMIZER
+epochs: 100
+warmup_epochs: 10
+decay_epochs: 0
+
+lr:  0.001
+min_lr: 1.e-6
+accum_iter: 1
+weight_decay: 0.05
+layer_decay: 0.75
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: [1]
+  lr_beta: [0.1,]
+  is_cosine_decay: false
+
+trainer:
+  _target_: srcs.trainer.trainer_finetune.Trainer

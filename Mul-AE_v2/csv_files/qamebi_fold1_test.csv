@@ -1,0 +1,24 @@
+names,labels
+test/benign/21 Benign Image.png,0
+test/benign/65 Benign Image.png,0
+test/benign/68 Benign Image.png,0
+test/benign/58 Benign Image.png,0
+test/benign/75 Benign Image.png,0
+test/benign/79 Benign Image.png,0
+test/benign/69 Benign Image.png,0
+test/benign/54 Benign Image.png,0
+test/benign/91 Benign Image.png,0
+test/benign/97 Benign Image.png,0
+test/benign/10 Benign Image.png,0
+test/malignant/24 Malignant Image.png,1
+test/malignant/7 Malignant Image.png,1
+test/malignant/77 Malignant Image.png,1
+test/malignant/65 Malignant Image.png,1
+test/malignant/20 Malignant Image.png,1
+test/malignant/99 Malignant Image.png,1
+test/malignant/43 Malignant Image.png,1
+test/malignant/111 Malignant Image.png,1
+test/malignant/97 Malignant Image.png,1
+test/malignant/100 Malignant Image.png,1
+test/malignant/58 Malignant Image.png,1
+test/malignant/53 Malignant Image.png,1

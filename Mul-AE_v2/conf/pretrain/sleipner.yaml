@@ -1,0 +1,53 @@
+# @package _global_
+# GENERAL
+seed: 123
+gpu_ids: 0,
+backend: nccl
+workers: 4
+
+# EPOCH
+epochs: 10
+warmup_epochs: 5
+
+# LOG ROOT
+log_root:  /data/Xiang/logs/Mul-AE
+print_freq: 400
+
+# MODEL
+arch: 
+  _target_: srcs.model.mul_ae.create_model
+  model_name: mae_vit_base_patch16
+  mae_pth: /data/Xiang/code/mae_pretrain_vit_base.pth
+
+# DATASET
+data_name: BP4D
+csv_root: /data/Xiang/csv/BP4D/Depth
+texture_root: /home/twang/Data/${data_name}/Texture_crop
+depth_root: /home/twang/Data/${data_name}/DepthCrop
+modalities: ['texture', 'depth']
+training: true
+batch_size: 20
+fold: 'all_fold'
+# TRANSFORM
+input_size: 224
+
+loss_scaler:
+  _target_: srcs.model.loss.NativeScalerWithGradNormCount
+
+# METRIC
+metrics:
+  - _target_: srcs.model.metric.F1
+
+# OPTIMIZER
+lr: 0.001
+min_lr: 1.e-6
+weight_decay: 0.05
+
+lr_adjust:
+  _target_: srcs.utils.lrd.Adjust_LearningRater
+  lr_steps: []
+  lr_beta: 0.1
+
+trainer:
+  _target_: srcs.trainer.trainer_pretrain.Trainer
+

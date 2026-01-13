@@ -1,0 +1,51 @@
+log_dir: ${name}/
+task: Visualize
+status: train
+save_epochs: 5
+save_dir: 'images'
+
+name: visualize
+tensorboard: false
+
+# GENERAL
+workers: 4
+gpu_ids: 0
+
+# LOG ROOT
+log_root:  /home/guest/Work/Xiang/logs/Mul-AE
+print_freq: 10
+
+# MODEL
+arch: 
+  _target_: srcs.model.mul_ae.create_model
+  model_name: mae_vit_base_patch16
+  pth_path: /home/guest/Work/Xiang/logs/Mul-AE/train/Pretrain/BP4D/all_fold/2022-03-17/21-54-24/models/checkpoint-epoch60.pth
+
+mask_ratio: 0.25
+
+# DATASET
+# data_name: BP4D
+# csv_root: /home/guest/Work/Xiang/csv/BP4D
+# texture_root:  /home/guest/Work/Xiang/data/Texture_crop/BP4D
+# depth_root: /home/guest/Work/Xiang/data/Depth_crop/BP4D
+
+data_name: DISFA
+csv_root: D:/csv/Disfa/Huiyuan
+texture_root:  /home/guest/Work/Xiang/data/Texture_crop/DISFA
+
+modalities: ['texture', 'depth']
+training: false
+batch_size: 64
+fold: 'all_fold'
+
+# TRANSFORM
+input_size: 224
+
+
+
+
+
+defaults:
+  - hydra/job_logging : custom
+  - hydra/run/dir: job_timestamp
+
