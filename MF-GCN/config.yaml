@@ -1,0 +1,78 @@
+# Paths
+base_data_dir: data/combined_3folds_balanced  # Update this to your data directory
+output_dir: artifacts  # Output directory for all results (can be overridden with --output_dir flag)
+modalities: [bmode, enhanced, improved]
+folds: [fold1, fold2, fold3]
+
+# Run control
+# NOTE: The script now trains ALL backbones automatically (custom, resnet18, dino_vits8, mae_vit, ijepa_vit)
+# The backbone setting below is ignored - use --backbones flag to specify which ones to train
+run:
+  id: null                   # optional; auto-generated timestamp if null, or specify custom ID
+  stages: [cnn, gcn]         # subset of: cnn, gcn (MLP fusion is optional - controlled by fusion.method)
+  previous_run_id: null      # when skipping stages, load inputs from this run
+
+# Dataloader
+image_size: 224
+batch_size: 32
+num_workers: 2
+
+# CNN feature extraction
+# NOTE: All backbones (custom, resnet18, dino_vits8, mae_vit, ijepa_vit) are trained automatically
+# The backbone setting below is used as a template - each backbone uses these same hyperparameters
+cnn:
+  backbone: custom   # This is ignored - all backbones are trained. Use --backbones flag to filter.
+  freeze_backbone: True    # False = fine-tune everything, True = use train_last_n_layers
+  train_last_n_layers: 1   # when freeze_backbone=True: 0=only head, 1+=last N layers + head
+  feature_dim: 512
+  lr: 0.0001
+  weight_decay: 1.0e-4
+  epochs: 50
+  patience: 10
+  early_stopping_metric: loss   # options: loss, accuracy
+  save_dir: artifacts/cnn
+  # MAE-specific (used only when backbone == mae_vit)
+  mae_checkpoint: /Users/mertdaloglu/Desktop/GCN_deployment/gcn/checkpoint-29.pth   # leave empty to skip loading
+  mae_norm: no_norm    # options: with_norm, no_norm
+  
+  # i-JEPA-specific (used only when backbone == ijepa_vit)
+  ijepa_model: "facebook/ijepa_vith14_1k"   # HuggingFace model name for i-JEPA
+
+# Fusion approach: Choose between concatenation or MLP fusion
+# - concat: Simple concatenation of features (bmode + enhanced + improved)
+# - mlp: Concatenate features then process through MLP to get fused features
+fusion:
+  method: concat   # options: concat, mlp
+
+# MLP fusion configuration (only used when fusion.method == "mlp")
+mlp:
+  hidden_dim1: 512
+  hidden_dim2: 256
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 1.0e-4
+  epochs: 50
+  patience: 10
+  early_stopping_metric: loss   # options: loss, accuracy
+  save_dir: artifacts/mlp
+
+# Graph construction
+graph:
+  type: cosine_topk   # options: cosine_topk, sparse_random
+  top_k: 7
+
+# GCN training
+gcn:
+  model: GCNNClassifier   # options: GCNNClassifier, GCNN_Dot_Product, GCNN_Concat_Attention, GCNN_Prod_Res, GATClassifier, GraphSAGEClassifier, GNClassifier
+  hidden_channels: 256
+  lr: 0.001
+  weight_decay: 1.0e-4
+  epochs: 125
+  patience: 50
+  early_stopping_metric: loss   # options: loss, accuracy
+  aggregation_threshold: 0.8    # Not used at the moment since no patientID info is available for BUSI data
+  save_dir: artifacts/gcn
+
+# Experiments
+experiments:
+  compare_bmode_vs_fusion: True  # Compare bmode-only GCN vs concatenated multi-modal GCN (default: True)

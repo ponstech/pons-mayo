@@ -1,0 +1,30 @@
+# Core dependencies
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+PyYAML>=6.0
+networkx>=3.2
+tqdm>=4.66
+
+# PyTorch ecosystem
+torch>=2.2
+torchvision>=0.17
+
+# Vision transformer backbones
+timm>=1.0.3
+transformers>=4.30.0
+
+# Graph neural networks
+torch-geometric>=2.4
+
+# Optional: For CUDA support with PyTorch Geometric
+# Install these separately based on your PyTorch/CUDA version:
+# torch-scatter
+# torch-sparse
+# torch-cluster
+# torch-spline-conv
+# See: https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+
