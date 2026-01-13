@@ -1,0 +1,674 @@
+names,labels
+val/benign/benign(884).png,0
+val/benign/bus_0785-s.png,0
+val/benign/bus_0910-r.png,0
+val/benign/DAPA_038.png,0
+val/benign/bus_0550-l.png,0
+val/benign/bus_0276-l.png,0
+val/benign/bus_0274-r.png,0
+val/benign/benign(532).png,0
+val/benign/benign(604).png,0
+val/benign/bus_0875-r.png,0
+val/benign/BUS_3_104.png,0
+val/benign/STSP_020.png,0
+val/benign/benign(848).png,0
+val/benign/benign(429).png,0
+val/benign/benign(42).png,0
+val/benign/benign (306).png,0
+val/benign/benign(579).png,0
+val/benign/000070.png,0
+val/benign/bus_0473-r.png,0
+val/benign/BUS_5_102.png,0
+val/benign/benign(739).png,0
+val/benign/BUS_2_148.png,0
+val/benign/bus_0604-l.png,0
+val/benign/PLBA_024.png,0
+val/benign/bus_0693-s.png,0
+val/benign/benign (307).png,0
+val/benign/bus_0531-r.png,0
+val/benign/bus_0494-l.png,0
+val/benign/000119.png,0
+val/benign/benign(212).png,0
+val/benign/58 Benign Image.png,0
+val/benign/BUS_3_285.png,0
+val/benign/bus_0416-l.png,0
+val/benign/bus_0332-l.png,0
+val/benign/bus_0275-r.png,0
+val/benign/case019.png,0
+val/benign/benign(97).png,0
+val/benign/benign (133).png,0
+val/benign/bus_0934-l.png,0
+val/benign/benign(192).png,0
+val/benign/bus_0519-r.png,0
+val/benign/bus_0536-l.png,0
+val/benign/BUS_1_184.png,0
+val/benign/benign(547).png,0
+val/benign/bus_0309-r.png,0
+val/benign/benign(259).png,0
+val/benign/benign (49).png,0
+val/benign/benign(856).png,0
+val/benign/000002.png,0
+val/benign/bus_0590-l.png,0
+val/benign/benign (39).png,0
+val/benign/bus_0999-r.png,0
+val/benign/bus_0244-l.png,0
+val/benign/BUS_3_144.png,0
+val/benign/62 Benign Image.png,0
+val/benign/61 Benign Image.png,0
+val/benign/BUS_2_132.png,0
+val/benign/benign(867).png,0
+val/benign/BUS_4_101.png,0
+val/benign/benign(558).png,0
+val/benign/000039.png,0
+val/benign/benign(467).png,0
+val/benign/benign(466).png,0
+val/benign/000090.png,0
+val/benign/benign(285).png,0
+val/benign/BUS_1_139.png,0
+val/benign/bus_0445-l.png,0
+val/benign/benign(89).png,0
+val/benign/FUHI_007.png,0
+val/benign/benign (152).png,0
+val/benign/bus_0101-r.png,0
+val/benign/ALWI_023.png,0
+val/benign/benign (166).png,0
+val/benign/82 Benign Image.png,0
+val/benign/BUS_2_42.png,0
+val/benign/benign (393).png,0
+val/benign/benign (296).png,0
+val/benign/bus_0929-r.png,0
+val/benign/benign (368).png,0
+val/benign/benign(843).png,0
+val/benign/bus_0100-l.png,0
+val/benign/BUS_2_79.png,0
+val/benign/bus_0058-l.png,0
+val/benign/bus_0277-r.png,0
+val/benign/bus_1064-r.png,0
+val/benign/case140.png,0
+val/benign/bus_0932-r.png,0
+val/benign/benign (283).png,0
+val/benign/bus_0220-l.png,0
+val/benign/000127.png,0
+val/benign/bus_0398-l.png,0
+val/benign/benign(625).png,0
+val/benign/bus_0504-l.png,0
+val/benign/BUS_1_1.png,0
+val/benign/bus_0088-s.png,0
+val/benign/benign (147).png,0
+val/benign/benign(249).png,0
+val/benign/benign(590).png,0
+val/benign/bus_1051-r.png,0
+val/benign/bus_0637-r.png,0
+val/benign/bus_0187-l.png,0
+val/benign/bus_0527-r.png,0
+val/benign/BUS_1_104.png,0
+val/benign/BUS_2_104.png,0
+val/benign/000066.png,0
+val/benign/benign(571).png,0
+val/benign/BUS_4_26.png,0
+val/benign/bus_1010-l.png,0
+val/benign/BUS_1_268.png,0
+val/benign/bus_0051-r.png,0
+val/benign/bus_0616-r.png,0
+val/benign/bus_0499-r.png,0
+val/benign/bus_0580-r.png,0
+val/benign/bus_0409-r.png,0
+val/benign/benign(568).png,0
+val/benign/BUS_2_9.png,0
+val/benign/BUS_1_93.png,0
+val/benign/BUS_3_21.png,0
+val/benign/benign(349).png,0
+val/benign/bus_0412-l.png,0
+val/benign/benign(286).png,0
+val/benign/bus_0228-l.png,0
+val/benign/BUS_1_282.png,0
+val/benign/BUS_1_155.png,0
+val/benign/benign(669).png,0
+val/benign/BUS_3_20.png,0
+val/benign/benign(694).png,0
+val/benign/benign(416).png,0
+val/benign/benign (273).png,0
+val/benign/bus_0436-l.png,0
+val/benign/benign(816).png,0
+val/benign/benign(240).png,0
+val/benign/bus_0991-s.png,0
+val/benign/bus_0277-l.png,0
+val/benign/bus_0160-l.png,0
+val/benign/benign (181).png,0
+val/benign/BUS_1_120.png,0
+val/benign/benign(847).png,0
+val/benign/BUS_4_135.png,0
+val/benign/benign(504).png,0
+val/benign/bus_0735-s.png,0
+val/benign/bus_0893-r.png,0
+val/benign/case156.png,0
+val/benign/BUS_4_12.png,0
+val/benign/COST_011.png,0
+val/benign/benign (271).png,0
+val/benign/benign (190).png,0
+val/benign/benign(174).png,0
+val/benign/benign(253).png,0
+val/benign/bus_0517-r.png,0
+val/benign/benign(710).png,0
+val/benign/benign(158).png,0
+val/benign/bus_0013-l.png,0
+val/benign/bus_0592-r.png,0
+val/benign/bus_0071-l.png,0
+val/benign/bus_0307-l.png,0
+val/benign/BUS_1_44.png,0
+val/benign/bus_0462-l.png,0
+val/benign/BUS_1_267.png,0
+val/benign/benign(364).png,0
+val/benign/benign (153).png,0
+val/benign/BUS_3_179.png,0
+val/benign/benign(809).png,0
+val/benign/BUS_1_23.png,0
+val/benign/BUS_4_20.png,0
+val/benign/case041.png,0
+val/benign/BUS_3_176.png,0
+val/benign/bus_0902-r.png,0
+val/benign/bus_0634-r.png,0
+val/benign/bus_0961-r.png,0
+val/benign/DAPA_012.png,0
+val/benign/benign (118).png,0
+val/benign/bus_0301-l.png,0
+val/benign/BUS_5_173.png,0
+val/benign/bus_0198-r.png,0
+val/benign/bus_1026-l.png,0
+val/benign/benign (201).png,0
+val/benign/bus_0651-r.png,0
+val/benign/000120.png,0
+val/benign/bus_0096-s.png,0
+val/benign/bus_0350-r.png,0
+val/benign/BUS_1_22.png,0
+val/benign/benign(862).png,0
+val/benign/BUS_2_192.png,0
+val/benign/benign(59).png,0
+val/benign/benign (66).png,0
+val/benign/benign(545).png,0
+val/benign/benign(38).png,0
+val/benign/benign(623).png,0
+val/benign/bus_0042-r.png,0
+val/benign/bus_0153-r.png,0
+val/benign/bus_0501-r.png,0
+val/benign/benign(216).png,0
+val/benign/bus_0404-l.png,0
+val/benign/benign (43).png,0
+val/benign/bus_0643-r.png,0
+val/benign/bus_0221-r.png,0
+val/benign/benign(350).png,0
+val/benign/benign (280).png,0
+val/benign/bus_0953-l.png,0
+val/benign/benign (301).png,0
+val/benign/bus_0928-l.png,0
+val/benign/benign (285).png,0
+val/benign/NIRO_000.png,0
+val/benign/bus_0381-l.png,0
+val/benign/BUS_3_58.png,0
+val/benign/benign(412).png,0
+val/benign/benign (245).png,0
+val/benign/bus_0897-r.png,0
+val/benign/bus_0889-l.png,0
+val/benign/bus_0359-r.png,0
+val/benign/benign(860).png,0
+val/benign/24 Benign Image.png,0
+val/benign/benign (22).png,0
+val/benign/benign (259).png,0
+val/benign/benign(230).png,0
+val/benign/benign(572).png,0
+val/benign/BUS_3_66.png,0
+val/benign/bus_0512-r.png,0
+val/benign/bus_0955-l.png,0
+val/benign/bus_0469-r.png,0
+val/benign/benign (303).png,0
+val/benign/benign (30).png,0
+val/benign/benign (264).png,0
+val/benign/BUS_1_131.png,0
+val/benign/benign(855).png,0
+val/benign/benign(685).png,0
+val/benign/benign (145).png,0
+val/benign/benign(312).png,0
+val/benign/bus_1008-r.png,0
+val/benign/benign(659).png,0
+val/benign/TOCI_031.png,0
+val/benign/bus_0804-s.png,0
+val/benign/bus_0517-l.png,0
+val/benign/000081.png,0
+val/benign/benign(160).png,0
+val/benign/benign(810).png,0
+val/benign/benign (119).png,0
+val/benign/benign (128).png,0
+val/benign/benign(481).png,0
+val/benign/BUS_1_82.png,0
+val/benign/BUS_4_121.png,0
+val/benign/benign(564).png,0
+val/benign/BUS_1_132.png,0
+val/benign/bus_0694-s.png,0
+val/benign/BUS_1_151.png,0
+val/benign/benign(403).png,0
+val/benign/benign(228).png,0
+val/benign/bus_0211-l.png,0
+val/benign/BUS_1_64.png,0
+val/benign/benign (267).png,0
+val/benign/bus_0424-l.png,0
+val/benign/000016.png,0
+val/benign/60 Benign Image.png,0
+val/benign/BUS_1_101.png,0
+val/benign/bus_1006-r.png,0
+val/benign/benign(479).png,0
+val/benign/benign(632).png,0
+val/benign/ALWI_003.png,0
+val/benign/benign(648).png,0
+val/benign/benign(191).png,0
+val/benign/BUS_2_301.png,0
+val/benign/case187.png,0
+val/benign/case064.png,0
+val/benign/BUS_1_271.png,0
+val/benign/BUS_1_142.png,0
+val/benign/benign(390).png,0
+val/benign/bus_0529-r.png,0
+val/benign/bus_0656-r.png,0
+val/benign/benign (15).png,0
+val/benign/bus_0898-r.png,0
+val/benign/benign (409).png,0
+val/benign/benign(883).png,0
+val/benign/benign(476).png,0
+val/benign/BUS_1_190.png,0
+val/benign/bus_1030-r.png,0
+val/benign/bus_0709-s.png,0
+val/benign/BUS_4_192.png,0
+val/benign/benign (110).png,0
+val/benign/bus_0485-l.png,0
+val/benign/bus_0729-s.png,0
+val/benign/35 Benign Image.png,0
+val/benign/DAPA_023.png,0
+val/benign/case108.png,0
+val/benign/BUS_5_98.png,0
+val/benign/bus_0047-r.png,0
+val/benign/38 Benign Image.png,0
+val/benign/ALWI_020.png,0
+val/benign/bus_0167-l.png,0
+val/benign/BUS_3_64.png,0
+val/benign/BUS_1_274.png,0
+val/benign/benign (404).png,0
+val/benign/BUS_2_150.png,0
+val/benign/benign(560).png,0
+val/benign/benign(581).png,0
+val/benign/bus_0306-l.png,0
+val/benign/bus_0441-r.png,0
+val/benign/bus_0575-r.png,0
+val/benign/bus_0136-r.png,0
+val/benign/bus_0739-s.png,0
+val/benign/bus_0144-l.png,0
+val/benign/bus_0422-r.png,0
+val/benign/bus_0803-s.png,0
+val/benign/bus_0910-l.png,0
+val/benign/bus_0379-r.png,0
+val/benign/BUS_1_295.png,0
+val/benign/bus_1038-r.png,0
+val/benign/benign (383).png,0
+val/benign/bus_0188-l.png,0
+val/benign/OSCU_012.png,0
+val/benign/bus_0556-r.png,0
+val/benign/benign(40).png,0
+val/benign/BUS_3_79.png,0
+val/benign/bus_0388-r.png,0
+val/benign/bus_0493-r.png,0
+val/benign/benign(489).png,0
+val/benign/benign (205).png,0
+val/benign/bus_0922-r.png,0
+val/benign/bus_0515-l.png,0
+val/benign/bus_0898-l.png,0
+val/benign/bus_0711-s.png,0
+val/benign/benign(70).png,0
+val/benign/bus_0164-l.png,0
+val/benign/benign(443).png,0
+val/benign/benign (202).png,0
+val/benign/benign (374).png,0
+val/benign/bus_0116-l.png,0
+val/benign/77 Benign Image.png,0
+val/benign/benign (32).png,0
+val/benign/BUS_1_9.png,0
+val/benign/bus_0115-r.png,0
+val/benign/case137.png,0
+val/benign/benign(707).png,0
+val/benign/benign (221).png,0
+val/benign/bus_0584-r.png,0
+val/benign/bus_0927-r.png,0
+val/benign/BUS_2_48.png,0
+val/benign/000063.png,0
+val/benign/benign (408).png,0
+val/benign/case051.png,0
+val/benign/benign(511).png,0
+val/benign/bus_0549-l.png,0
+val/benign/benign(622).png,0
+val/benign/benign (17).png,0
+val/benign/bus_0848-l.png,0
+val/benign/benign(199).png,0
+val/benign/BUS_2_58.png,0
+val/benign/case069.png,0
+val/benign/benign(555).png,0
+val/benign/benign(92).png,0
+val/benign/bus_0011-r.png,0
+val/benign/bus_0783-s.png,0
+val/benign/benign(80).png,0
+val/benign/000124.png,0
+val/benign/bus_0572-l.png,0
+val/benign/bus_0022-l.png,0
+val/benign/benign (31).png,0
+val/benign/BUS_3_137.png,0
+val/benign/benign(84).png,0
+val/benign/bus_0039-r.png,0
+val/benign/benign(530).png,0
+val/benign/benign(773).png,0
+val/benign/bus_0923-r.png,0
+val/benign/BUS_3_139.png,0
+val/benign/000014.png,0
+val/benign/bus_0875-l.png,0
+val/benign/BUS_3_35.png,0
+val/benign/benign(165).png,0
+val/benign/benign(776).png,0
+val/benign/bus_0636-r.png,0
+val/benign/benign(3).png,0
+val/benign/DAPA_022.png,0
+val/benign/bus_0548-l.png,0
+val/benign/bus_0648-l.png,0
+val/benign/bus_0859-r.png,0
+val/benign/BUS_1_122.png,0
+val/malignant/malignant(939).png,1
+val/malignant/malignant(747).png,1
+val/malignant/malignant(92).png,1
+val/malignant/bus_0596-r.png,1
+val/malignant/COVA_005.png,1
+val/malignant/malignant(30).png,1
+val/malignant/bus_0478-l.png,1
+val/malignant/bus_0130-l.png,1
+val/malignant/bus_0594-r.png,1
+val/malignant/bus_0901-r.png,1
+val/malignant/BUS_2_273.png,1
+val/malignant/malignant(1384).png,1
+val/malignant/case198.png,1
+val/malignant/malignant(464).png,1
+val/malignant/malignant (149).png,1
+val/malignant/108 Malignant Image.png,1
+val/malignant/malignant(1221).png,1
+val/malignant/malignant(453).png,1
+val/malignant/BUS_1_290.png,1
+val/malignant/malignant(159).png,1
+val/malignant/bus_0016-l.png,1
+val/malignant/malignant(1161).png,1
+val/malignant/malignant(1113).png,1
+val/malignant/malignant(774).png,1
+val/malignant/bus_0431-l.png,1
+val/malignant/malignant(1123).png,1
+val/malignant/bus_0364-r.png,1
+val/malignant/malignant(167).png,1
+val/malignant/malignant(1512).png,1
+val/malignant/malignant(90).png,1
+val/malignant/malignant(793).png,1
+val/malignant/bus_0180-r.png,1
+val/malignant/malignant(718).png,1
+val/malignant/malignant(281).png,1
+val/malignant/malignant(493).png,1
+val/malignant/malignant(866).png,1
+val/malignant/BUS_2_287.png,1
+val/malignant/malignant(560).png,1
+val/malignant/malignant(1338).png,1
+val/malignant/BUS_1_270.png,1
+val/malignant/bus_0369-l.png,1
+val/malignant/bus_0405-r.png,1
+val/malignant/malignant(1448).png,1
+val/malignant/malignant(1486).png,1
+val/malignant/bus_0411-l.png,1
+val/malignant/bus_0411-r.png,1
+val/malignant/malignant(530).png,1
+val/malignant/malignant(937).png,1
+val/malignant/malignant(1146).png,1
+val/malignant/malignant(782).png,1
+val/malignant/malignant(659).png,1
+val/malignant/bus_0375-r.png,1
+val/malignant/malignant (7).png,1
+val/malignant/malignant(1302).png,1
+val/malignant/malignant(878).png,1
+val/malignant/malignant(946).png,1
+val/malignant/malignant(1353).png,1
+val/malignant/case212.png,1
+val/malignant/malignant(390).png,1
+val/malignant/bus_1014-l.png,1
+val/malignant/bus_0362-r.png,1
+val/malignant/malignant(1375).png,1
+val/malignant/case046.png,1
+val/malignant/malignant(1270).png,1
+val/malignant/malignant(731).png,1
+val/malignant/case176.png,1
+val/malignant/malignant(234).png,1
+val/malignant/bus_0748-s.png,1
+val/malignant/malignant(934).png,1
+val/malignant/malignant(176).png,1
+val/malignant/malignant(1116).png,1
+val/malignant/malignant(169).png,1
+val/malignant/malignant(362).png,1
+val/malignant/bus_0939-s.png,1
+val/malignant/malignant(1363).png,1
+val/malignant/malignant(344).png,1
+val/malignant/malignant (189).png,1
+val/malignant/malignant(1432).png,1
+val/malignant/malignant(584).png,1
+val/malignant/bus_0029-s.png,1
+val/malignant/malignant(154).png,1
+val/malignant/bus_0488-l.png,1
+val/malignant/bus_0021-l.png,1
+val/malignant/malignant (179).png,1
+val/malignant/bus_0860-l.png,1
+val/malignant/malignant(332).png,1
+val/malignant/malignant(646).png,1
+val/malignant/malignant(621).png,1
+val/malignant/bus_1036-r.png,1
+val/malignant/malignant (178).png,1
+val/malignant/malignant(149).png,1
+val/malignant/bus_0663-r.png,1
+val/malignant/malignant(1509).png,1
+val/malignant/malignant(1031).png,1
+val/malignant/bus_0123-r.png,1
+val/malignant/000027.png,1
+val/malignant/malignant(1402).png,1
+val/malignant/malignant(215).png,1
+val/malignant/bus_0989-l.png,1
+val/malignant/malignant(410).png,1
+val/malignant/BUS_2_161.png,1
+val/malignant/BUS_1_292.png,1
+val/malignant/malignant(1489).png,1
+val/malignant/bus_0535-l.png,1
+val/malignant/malignant(592).png,1
+val/malignant/malignant(730).png,1
+val/malignant/BUS_3_251.png,1
+val/malignant/malignant(512).png,1
+val/malignant/malignant(623).png,1
+val/malignant/malignant(768).png,1
+val/malignant/bus_0998-s.png,1
+val/malignant/bus_0609-r.png,1
+val/malignant/case117.png,1
+val/malignant/malignant(627).png,1
+val/malignant/53 Malignant Image.png,1
+val/malignant/malignant(56).png,1
+val/malignant/malignant(89).png,1
+val/malignant/malignant(377).png,1
+val/malignant/bus_0947-l.png,1
+val/malignant/000309.png,1
+val/malignant/UNCU_006.png,1
+val/malignant/malignant(1357).png,1
+val/malignant/malignant(325).png,1
+val/malignant/bus_0560-l.png,1
+val/malignant/malignant(924).png,1
+val/malignant/case170.png,1
+val/malignant/malignant(637).png,1
+val/malignant/CHVI_000.png,1
+val/malignant/malignant(305).png,1
+val/malignant/MENE_000.png,1
+val/malignant/UNCU_003.png,1
+val/malignant/malignant(1281).png,1
+val/malignant/malignant(255).png,1
+val/malignant/BUS_3_34.png,1
+val/malignant/BUS_2_251.png,1
+val/malignant/malignant (28).png,1
+val/malignant/malignant(565).png,1
+val/malignant/bus_0808-s.png,1
+val/malignant/bus_0330-r.png,1
+val/malignant/case035.png,1
+val/malignant/malignant(598).png,1
+val/malignant/malignant(573).png,1
+val/malignant/bus_0950-r.png,1
+val/malignant/malignant(694).png,1
+val/malignant/malignant(543).png,1
+val/malignant/malignant(1167).png,1
+val/malignant/malignant(1398).png,1
+val/malignant/37 Malignant Image.png,1
+val/malignant/malignant(307).png,1
+val/malignant/malignant(229).png,1
+val/malignant/malignant(1479).png,1
+val/malignant/BUS_3_75.png,1
+val/malignant/malignant(1496).png,1
+val/malignant/malignant(180).png,1
+val/malignant/bus_0935-r.png,1
+val/malignant/malignant(1341).png,1
+val/malignant/malignant(957).png,1
+val/malignant/68 Malignant Image.png,1
+val/malignant/bus_0478-r.png,1
+val/malignant/malignant(1155).png,1
+val/malignant/malignant(788).png,1
+val/malignant/000132.png,1
+val/malignant/bus_1004-r.png,1
+val/malignant/malignant(711).png,1
+val/malignant/malignant(996).png,1
+val/malignant/malignant(1026).png,1
+val/malignant/malignant(863).png,1
+val/malignant/malignant(797).png,1
+val/malignant/malignant(1356).png,1
+val/malignant/malignant(1236).png,1
+val/malignant/malignant(956).png,1
+val/malignant/malignant(1385).png,1
+val/malignant/bus_1035-l.png,1
+val/malignant/bus_0935-l.png,1
+val/malignant/malignant(418).png,1
+val/malignant/bus_0373-l.png,1
+val/malignant/malignant(4).png,1
+val/malignant/bus_0341-l.png,1
+val/malignant/malignant(720).png,1
+val/malignant/malignant(99).png,1
+val/malignant/malignant(1477).png,1
+val/malignant/malignant(1153).png,1
+val/malignant/BUS_3_77.png,1
+val/malignant/bus_0571-l.png,1
+val/malignant/malignant(613).png,1
+val/malignant/bus_0987-l.png,1
+val/malignant/malignant (27).png,1
+val/malignant/bus_0705-s.png,1
+val/malignant/malignant(1093).png,1
+val/malignant/malignant(868).png,1
+val/malignant/malignant(51).png,1
+val/malignant/malignant(869).png,1
+val/malignant/malignant (162).png,1
+val/malignant/bus_1004-l.png,1
+val/malignant/bus_0853-l.png,1
+val/malignant/malignant(1330).png,1
+val/malignant/malignant(422).png,1
+val/malignant/bus_1062-r.png,1
+val/malignant/malignant(1256).png,1
+val/malignant/malignant(1210).png,1
+val/malignant/bus_0980-l.png,1
+val/malignant/malignant(1224).png,1
+val/malignant/malignant(1184).png,1
+val/malignant/bus_0464-r.png,1
+val/malignant/malignant(71).png,1
+val/malignant/malignant(1410).png,1
+val/malignant/CHVI_006.png,1
+val/malignant/malignant(701).png,1
+val/malignant/case013.png,1
+val/malignant/malignant(112).png,1
+val/malignant/malignant(1355).png,1
+val/malignant/malignant(842).png,1
+val/malignant/malignant(710).png,1
+val/malignant/malignant (54).png,1
+val/malignant/malignant(945).png,1
+val/malignant/malignant(1032).png,1
+val/malignant/malignant(43).png,1
+val/malignant/malignant(69).png,1
+val/malignant/bus_0989-r.png,1
+val/malignant/malignant(567).png,1
+val/malignant/malignant (174).png,1
+val/malignant/malignant(1430).png,1
+val/malignant/malignant(48).png,1
+val/malignant/malignant(446).png,1
+val/malignant/malignant(736).png,1
+val/malignant/malignant(22).png,1
+val/malignant/malignant(1420).png,1
+val/malignant/malignant(489).png,1
+val/malignant/BUS_3_116.png,1
+val/malignant/malignant(965).png,1
+val/malignant/malignant(137).png,1
+val/malignant/bus_0298-l.png,1
+val/malignant/malignant (156).png,1
+val/malignant/bus_1028-r.png,1
+val/malignant/bus_0245-l.png,1
+val/malignant/malignant(985).png,1
+val/malignant/bus_0321-s.png,1
+val/malignant/malignant(839).png,1
+val/malignant/86 Malignant Image.png,1
+val/malignant/malignant(437).png,1
+val/malignant/malignant(651).png,1
+val/malignant/malignant (143).png,1
+val/malignant/bus_0440-l.png,1
+val/malignant/malignant(1168).png,1
+val/malignant/malignant(802).png,1
+val/malignant/bus_0457-r.png,1
+val/malignant/malignant (53).png,1
+val/malignant/malignant(709).png,1
+val/malignant/113 Malignant Image.png,1
+val/malignant/000299.png,1
+val/malignant/bus_0314-l.png,1
+val/malignant/BUS_1_216.png,1
+val/malignant/malignant(737).png,1
+val/malignant/BUS_2_280.png,1
+val/malignant/malignant(1377).png,1
+val/malignant/malignant(941).png,1
+val/malignant/BUS_1_92.png,1
+val/malignant/bus_0240-l.png,1
+val/malignant/malignant(322).png,1
+val/malignant/malignant(298).png,1
+val/malignant/malignant(480).png,1
+val/malignant/BUS_1_40.png,1
+val/malignant/malignant(393).png,1
+val/malignant/bus_1063-r.png,1
+val/malignant/bus_1055-l.png,1
+val/malignant/58 Malignant Image.png,1
+val/malignant/bus_0272-r.png,1
+val/malignant/malignant(862).png,1
+val/malignant/malignant(859).png,1
+val/malignant/case145.png,1
+val/malignant/malignant(10).png,1
+val/malignant/malignant(918).png,1
+val/malignant/bus_1033-r.png,1
+val/malignant/malignant(608).png,1
+val/malignant/malignant(508).png,1
+val/malignant/malignant(64).png,1
+val/malignant/malignant(474).png,1
+val/malignant/42 Malignant Image.png,1
+val/malignant/BUS_2_158.png,1
+val/malignant/malignant(35).png,1
+val/malignant/malignant(1259).png,1
+val/malignant/malignant(483).png,1
+val/malignant/bus_0624-l.png,1
+val/malignant/malignant(585).png,1
+val/malignant/malignant(491).png,1
+val/malignant/74 Malignant Image.png,1
+val/malignant/malignant (102).png,1
+val/malignant/malignant(140).png,1
+val/malignant/malignant (145).png,1
+val/malignant/malignant(1500).png,1
+val/malignant/malignant(475).png,1
+val/malignant/malignant(96).png,1
+val/malignant/000043.png,1
+val/malignant/malignant(1109).png,1
+val/malignant/bus_0366-l.png,1
+val/malignant/bus_1050-r.png,1
+val/malignant/malignant (69).png,1
