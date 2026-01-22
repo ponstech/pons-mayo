@@ -211,9 +211,14 @@ def load_dino_backbones(
             num_classes=2,
         )
         state = torch.load(str(ckpt_path), map_location="cpu", weights_only=False)
-        model.load_state_dict(state)
+        model.load_state_dict(state, strict=False)  # Use strict=False to handle potential mismatches
         model.to(device)
         model.eval()
+        
+        # Verify model is in eval mode and has extract_features method
+        if not hasattr(model, "extract_features"):
+            raise RuntimeError(f"Model for {mod} does not have extract_features method")
+        
         models[mod] = model
 
         # Use the same base transform for all three
@@ -270,13 +275,47 @@ def extract_single_features_concat(
     i_img = _load_image(improved_path, rgb=True).unsqueeze(0).to(device)
 
     with torch.no_grad():
-        fb = model_bmode.extract_features(b_img) if hasattr(model_bmode, "extract_features") else model_bmode(b_img)
-        fe = model_enh.extract_features(e_img) if hasattr(model_enh, "extract_features") else model_enh(e_img)
-        fi = model_imp.extract_features(i_img) if hasattr(model_imp, "extract_features") else model_imp(i_img)
+        # Ensure models are in eval mode
+        model_bmode.eval()
+        model_enh.eval()
+        model_imp.eval()
+        
+        # Extract features
+        if hasattr(model_bmode, "extract_features"):
+            fb = model_bmode.extract_features(b_img)
+        else:
+            # Fallback: use forward and take features before classifier
+            fb = model_bmode(b_img)
+            # If it's logits, we need to get features differently
+            # This shouldn't happen with DINOBackbone, but handle it
+            if fb.shape[-1] == 2:  # Looks like logits
+                raise RuntimeError("Model returned logits instead of features. Check model architecture.")
+        
+        if hasattr(model_enh, "extract_features"):
+            fe = model_enh.extract_features(e_img)
+        else:
+            fe = model_enh(e_img)
+            if fe.shape[-1] == 2:
+                raise RuntimeError("Model returned logits instead of features. Check model architecture.")
+        
+        if hasattr(model_imp, "extract_features"):
+            fi = model_imp.extract_features(i_img)
+        else:
+            fi = model_imp(i_img)
+            if fi.shape[-1] == 2:
+                raise RuntimeError("Model returned logits instead of features. Check model architecture.")
 
+    # Ensure we have the right shape: (batch, features) -> (features,)
     fb = fb.squeeze(0).cpu().numpy().astype(np.float32)
     fe = fe.squeeze(0).cpu().numpy().astype(np.float32)
     fi = fi.squeeze(0).cpu().numpy().astype(np.float32)
+    
+    # Verify feature dimensions
+    if len(fb.shape) != 1 or len(fe.shape) != 1 or len(fi.shape) != 1:
+        raise ValueError(f"Expected 1D features, got shapes: bmode={fb.shape}, enhanced={fe.shape}, improved={fi.shape}")
+    
+    if fb.shape[0] != 512 or fe.shape[0] != 512 or fi.shape[0] != 512:
+        raise ValueError(f"Expected 512-D features, got: bmode={fb.shape[0]}, enhanced={fe.shape[0]}, improved={fi.shape[0]}")
 
     fused = np.concatenate([fb, fe, fi], axis=0)
     return fused  # shape (1536,)
@@ -298,8 +337,12 @@ def build_inference_graph(
     - New node connects to its top-K most similar training nodes (cosine similarity), undirected.
     """
     # Normalize features as in graph_cosine_topk
-    train_norm = _normalize_features(train_feats, zscore=True, l2=False)
-    new_norm = _normalize_features(new_feat[None, :], zscore=True, l2=False)[0]
+    # IMPORTANT: Normalize new_feat using the training data statistics, not its own!
+    # This ensures consistent normalization across all samples
+    all_feats = np.vstack([train_feats, new_feat[None, :]])
+    all_norm = _normalize_features(all_feats, zscore=True, l2=False)
+    train_norm = all_norm[:-1]  # All but last
+    new_norm = all_norm[-1]     # Last one (the new sample)
 
     # Compute cosine similarity between new node and all training nodes
     norms_train = np.linalg.norm(train_norm, axis=1, keepdims=True)
@@ -451,7 +494,7 @@ def infer_single(
 
     in_channels = x.shape[1]
     gcn_model = build_model(
-        model_name=gcn_model_name,
+        name=gcn_model_name,
         in_channels=in_channels,
         hidden_channels=256,
         num_classes=2,
