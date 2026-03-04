@@ -1,0 +1,21 @@
+# PONS-CLIP: B-mode only (single image per scan)
+# Compare with multifeature.yaml for 3-image fusion
+#
+# Folder-based (use this with --config and set data_dir):
+#   data_dir: "data/fold1"
+# Or manifest-based:
+#   manifest_train: "data/train_manifest.csv"
+#   manifest_val: "data/val_manifest.csv"
+
+data_dir: "data/fold1"
+# manifest_train: "data/train_manifest.csv"
+# manifest_val: "data/val_manifest.csv"
+root_dir: null
+
+use_multifeature: false
+fusion_type: weighted
+
+output_dir: "./outputs_bmode"
+epochs: 10
+batch_size: 16
+lr: 1.0e-5

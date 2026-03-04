@@ -1,0 +1,16 @@
+# PONS-CLIP: Multi-feature (b-mode + enhanced + improved), frozen vision encoder
+#
+# Folder-based: data_dir: "data/fold1"
+
+data_dir: "data/fold1"
+# manifest_train: "data/train_manifest.csv"
+# manifest_val: "data/val_manifest.csv"
+root_dir: null
+
+use_multifeature: true
+fusion_type: weighted
+
+output_dir: "./outputs_multifeature"
+epochs: 10
+batch_size: 16
+lr: 1.0e-4
